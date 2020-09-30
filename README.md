@@ -1,4 +1,4 @@
-# Laravel 7 把 Artisan 指令加入排程以次分鐘的頻率運行
+# Laravel 8 把 Artisan 指令加入排程以次分鐘的頻率運行
 
 引入 spatie 的 laravel-short-schedule 套件來擴增排程以次分鐘的頻率運行 Artisan 指令，例如需要執行更高頻率的操作（例如每秒執行一次）。
 
