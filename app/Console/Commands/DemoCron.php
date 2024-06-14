@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class DemoCron extends Command
 {
@@ -21,23 +22,11 @@ class DemoCron extends Command
     protected $description = 'Command description';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
-     *
-     * @return mixed
      */
     public function handle()
     {
-        \Log::info("Cron is working fine!");
-        $this->info('Demo:Cron Cummand Run successfully!');
+        Log::info(__('Cron is working fine!'));
+        $this->info(__(':signature Command Run successfully!', ['signature' => $this->signature]));
     }
 }

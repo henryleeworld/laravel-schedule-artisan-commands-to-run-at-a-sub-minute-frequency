@@ -1,6 +1,6 @@
-# Laravel 10 把 Artisan 指令加入排程以次分鐘的頻率運行
+# Laravel 11 把 Artisan 指令加入排程以次分鐘的頻率運行
 
-引入 spatie 的 laravel-short-schedule 套件來擴增排程以次分鐘的頻率運行 Artisan 指令，例如需要執行更高頻率的操作（例如每秒執行一次）。
+以次分鐘的頻率運行 Artisan 指令，例如需要執行更高頻率的操作（例如每秒運行一次）。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -16,16 +16,13 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __short-schedule__ 來衡量排定的高頻率任務並執行預定任務。
+- 啟動排程器，僅需要在伺服器上增加一條 Cron 項目即可。
 ```sh
-$ php artisan short-schedule:run
+* * * * * cd /{專案路徑} && php artisan schedule:run >> /dev/null 2>&1
 ```
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/XbVSzMX.png)
-> 每秒呼叫 Laravel 指令排程器
-
-![](https://i.imgur.com/3VEBZpo.png)
-> 執行指令
+![](https://i.imgur.com/RvwKUeX.png)
+> 每秒運行指令
