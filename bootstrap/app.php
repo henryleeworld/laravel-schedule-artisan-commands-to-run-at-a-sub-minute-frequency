@@ -18,10 +18,4 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withSchedule(function ($schedule) {
         $schedule->command('demo:cron')->everySecond()->withoutOverlapping(10);
-        // $schedule->command('demo:cron')->everyTwoSeconds()->withoutOverlapping(10);
-        // $schedule->command('demo:cron')->everyFiveSeconds()->withoutOverlapping(10);
-        // $schedule->command('demo:cron')->everyTenSeconds()->withoutOverlapping(10);
-        // $schedule->command('demo:cron')->everyFifteenSeconds()->withoutOverlapping(10);
-        // $schedule->command('demo:cron')->everyTwentySeconds()->withoutOverlapping(10);
-        // $schedule->command('demo:cron')->everyThirtySeconds()->withoutOverlapping(10);
     })->create();

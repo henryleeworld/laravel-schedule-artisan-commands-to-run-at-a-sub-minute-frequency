@@ -1,4 +1,4 @@
-# Laravel 11 把 Artisan 指令加入排程以次分鐘的頻率運行
+# Laravel 12 把 Artisan 指令加入排程以次分鐘的頻率運行
 
 以次分鐘的頻率運行 Artisan 指令，例如需要執行更高頻率的操作（例如每秒運行一次）。
 
@@ -16,6 +16,10 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
+```sh
+$ php artisan migrate
+```
 - 啟動排程器，僅需要在伺服器上增加一條 Cron 項目即可。
 ```sh
 * * * * * cd /{專案路徑} && php artisan schedule:run >> /dev/null 2>&1
@@ -24,5 +28,5 @@ $ php artisan key:generate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/RvwKUeX.png)
+![](https://i.imgur.com/j9VTPk0.png)
 > 每秒運行指令
